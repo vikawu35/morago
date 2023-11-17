@@ -1,0 +1,16 @@
+scalar Upload
+
+type File{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    originalTitle: String
+    path: String
+    type: String
+}
+
+input FileInput{
+    originalTitle: String
+    path: String
+    fileType: String
+}

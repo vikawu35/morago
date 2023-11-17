@@ -1,0 +1,10 @@
+type UserProfile{
+    id:ID
+    isFreeCallMade: Boolean
+    createdAt: String
+    updatedAt: String
+}
+
+input UserProfileInput {
+    isFreeCallMade: Boolean
+}

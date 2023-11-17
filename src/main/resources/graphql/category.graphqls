@@ -1,0 +1,12 @@
+type Category{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    isActive:Boolean
+    name: String
+}
+
+input CategoryInput{
+    isActive:Boolean
+    name: String
+}

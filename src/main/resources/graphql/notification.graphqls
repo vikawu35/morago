@@ -1,0 +1,14 @@
+type Notification{
+    id: ID
+    date: String
+    time: String
+    title: String
+    text: String
+    user: User
+}
+
+input NotificationInput{
+    title: String
+    text: String
+    user: Int
+}

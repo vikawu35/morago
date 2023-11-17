@@ -1,0 +1,27 @@
+type Theme{
+    id:ID
+    description: String
+    isActive: Boolean
+    isPopular: Boolean
+    koreanTitle: String
+    name: ETheme
+    nightPrice: Float
+    price: Float
+    category: Category
+    file:File
+}
+
+input ThemeInput{
+    name: ETheme
+}
+
+input UpdateThemeInput {
+    description: String
+    isActive: Boolean
+    isPopular: Boolean
+    koreanTitle: String
+    nightPrice: Float
+    price: Float
+    category: Int
+    file: Int
+}

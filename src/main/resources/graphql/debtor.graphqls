@@ -1,0 +1,16 @@
+type Debtor{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    accountHolder: String
+    nameOfBank: String
+    isPaid: Boolean
+    user: User
+}
+
+input DebtorInput{
+    accountHolder: String
+    nameOfBank: String
+    isPaid: Boolean
+    user: Int
+}

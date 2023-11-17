@@ -1,0 +1,14 @@
+type FrequentlyAskedQuestion{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    category: String
+    answer: String
+    question: String
+}
+
+input FrequentlyAskedQuestionInput{
+    category: String
+    answer: String
+    question: String
+}

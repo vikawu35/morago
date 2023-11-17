@@ -1,0 +1,32 @@
+type Call{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    callStatus: String
+    channelName: String
+    commission: Float
+    duration: Int
+    isEndCall: Boolean
+    status: Boolean
+    sum: Float
+    translatorHasRated: Boolean
+    userHasRated: Boolean
+    caller: User
+    answerer: User
+    theme: Theme
+}
+
+input CallInput{
+    callStatus: String
+    channelName: String
+    commission: Float
+    duration: Int
+    isEndCall: Boolean
+    status: Boolean
+    sum: Float
+    translatorHasRated: Boolean
+    userHasRated: Boolean
+    caller: Int
+    answerer: Int
+    theme: Int
+}

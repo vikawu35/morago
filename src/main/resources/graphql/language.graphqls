@@ -1,0 +1,8 @@
+type Language{
+    id:ID
+    name: ELanguage
+}
+
+input LanguageInput{
+    name: ELanguage
+}

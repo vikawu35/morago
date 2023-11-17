@@ -1,0 +1,162 @@
+type Query{
+    getAllUser: [User]
+    getAllUserPaged(page: Int!, size: Int!) : [User]
+    getUserById(id: ID): User
+    getCurrentUser: User
+
+    getAllUserProfile: [UserProfile]
+    getAllUserProfilePaged(page: Int!, size: Int!) :[UserProfile]
+    getUserProfileById(id: ID): UserProfile
+
+    getAllTranslatorProfile: [TranslatorProfile]
+    getAllTranslatorProfilePaged(page: Int!, size: Int!) : [TranslatorProfile]
+    getTranslatorProfileById(id: ID): TranslatorProfile
+
+    getAllPasswordReset: [PasswordReset]
+    getAllPasswordResetPaged(page: Int!, size: Int!) : [PasswordReset]
+    getPasswordResetById(id: ID): PasswordReset
+
+    getAllFile: [File]
+    getAllFilePaged(page: Int!, size: Int!): [File]
+    getFileById(id: ID): File
+
+    getAllAppVersion: [AppVersion]
+    getAllAppVersionPaged(page: Int!, size: Int!): [AppVersion]
+    getAppVersionByEPlatform(platform: String): AppVersion
+
+    getAllCall: [Call]
+    getAllCallPaged(page: Int!, size: Int!) : [Call]
+    getCallById(id: ID): Call
+
+    getAllCategory: [Category]
+    getAllCategoryPaged(page: Int!, size: Int!): [Category]
+    getCategoryById(id: ID): Category
+
+    getAllCoin: [Coin]
+    getAllCoinPaged(page: Int!, size: Int!): [Coin]
+    getCoinById(id: ID): Coin
+
+    getAllDebtor: [Debtor]
+    getAllDebtorPaged(page: Int!, size: Int!): [Debtor]
+    getDebtorById(id: ID): Debtor
+
+    getAllDeposit: [Deposit]
+    getAllDepositPaged(page: Int!, size: Int!): [Deposit]
+    getDepositById(id: ID): Deposit
+
+    getAllFrequentlyAskedQuestion: [FrequentlyAskedQuestion]
+    getAllFrequentlyAskedQuestionPaged(page: Int!, size: Int!): [FrequentlyAskedQuestion]
+    getFrequentlyAskedQuestionById(id: ID): FrequentlyAskedQuestion
+
+    getAllLanguage: [Language]
+    getAllLanguagePaged(page: Int!, size: Int!): [Language]
+    getLanguageById(id: ID): Language
+
+    getAllNotification: [Notification]
+    getAllNotificationPaged(page: Int!, size: Int!): [Notification]
+    getNotificationById(id: ID): Notification
+
+    getAllRating:[Rating]
+    getAllRatingPaged(page: Int!, size: Int!): [Rating]
+    getRatingById(id: ID): Rating
+
+    getAllRole: [Role]
+    getAllRolePaged(page: Int!, size: Int!): [Role]
+    getRoleById(id: ID): Role
+
+    getAllTheme:[Theme]
+    getAlThemePaged(page: Int!, size: Int!): [Theme]
+    getThemeById(id: ID): Theme
+
+    getAllWithdrawalService:[Withdrawal]
+    getAllWithdrawalPaged(page: Int!, size: Int!): [Withdrawal]
+    getWithdrawalById(id: ID): Withdrawal
+}
+
+type Mutation{
+    registerUser(authenticationInput : AuthenticationInput!) : RegistrationPayload
+    registerTranslator(translatorRegistrationInput : TranslatorRegistrationInput!) : RegistrationPayload
+    registerAdmin(authenticationInput : AuthenticationInput!) : RegistrationPayload
+    refreshToken(refreshTokenInput : RefreshTokenInput!) : RefreshTokenPayload
+    login(authenticationInput : AuthenticationInput!) : LoginPayload
+    deleteCurrentUser: Boolean
+
+    updateUsername(usernameUpdateInput: UsernameUpdateInput!) : String
+    requestPasswordReset(phone: String!) : PasswordResetPayload
+    validateVerificationCode(passwordResetInput: PasswordResetInput!):String
+    updatePassword(passwordUpdateInput:PasswordUpdateInput!):User
+    deletePasswordResetById(id: ID):Boolean
+
+    deleteUserById(id: ID): Boolean
+    updateUser(id: ID
+        userInput: UserInput): User
+
+    updateUserProfile(id:ID
+        userProfileInput: UserProfileInput): UserProfile
+
+    updateTranslatorProfile(id: ID
+        translatorProfileInput: TranslatorProfileInput): TranslatorProfile
+
+    uploadFile(multipartFile: Upload!) :File!
+    updateFile(id: ID
+        fileInput: FileInput): File
+    deleteFileById(id: ID):Boolean
+
+    createCall(callInput:CallInput): Call
+    deleteCallById(id: ID):Boolean
+    updateCall(id: ID
+        callInput: CallInput): Call
+
+    createCategory(categoryInput: CategoryInput): Category
+    deleteCategoryById(id: ID):Boolean
+    updateCategory(id: ID
+        categoryInput: CategoryInput): Category
+
+    createCoin(coinInput: CoinInput): Coin
+    deleteCoinById(id: ID):Boolean
+    updateCoin(id:ID
+        coinInput: CoinInput): Coin
+
+    createDebtor(debtorInput: DebtorInput): Debtor
+    deleteDebtorById(id: ID):Boolean
+    updateDebtor(id:ID
+        debtorInput: DebtorInput): Debtor
+
+    createDeposit(depositInput:DepositInput): Deposit
+    deleteDepositById(id: ID):Boolean
+    updateDeposit(id: ID
+        depositInput: DepositInput): Deposit
+
+    createFrequentlyAskedQuestion(frequentlyAskedQuestionInput: FrequentlyAskedQuestionInput): FrequentlyAskedQuestion
+    deleteFrequentlyAskedQuestionById(id: ID):Boolean
+    updateFrequentlyAskedQuestion(id: ID
+        frequentlyAskedQuestionInput: FrequentlyAskedQuestionInput): FrequentlyAskedQuestion
+
+    deleteLanguageById(id: ID):Boolean
+    updateLanguage(id: ID
+        languageInput:LanguageInput): Language
+
+    createNotification(notificationInput:NotificationInput): Notification
+    deleteNotificationById(id: ID): Boolean
+    updateNotification(id: ID
+        notificationInput:NotificationInput): Notification
+
+    createRating(ratingInput:RatingInput): Rating
+    deleteRatingById(id: ID):Boolean
+    updateRating(id: ID
+        ratingInput:RatingInput): Rating
+
+    deleteRoleById(id: ID): Boolean
+    updateRole(id: ID
+        roleInput:RoleInput): Role
+
+    deleteThemeById(id: ID):Boolean
+    updateTheme(name: ETheme
+        themeInput:UpdateThemeInput):Theme
+
+    createWithdrawal(withdrawalInput: WithdrawalInput): Withdrawal
+    deleteWithdrawalById(id: ID):String
+    updateWithdrawal(id: ID
+        withdrawalInput: WithdrawalInput): Withdrawal
+}
+

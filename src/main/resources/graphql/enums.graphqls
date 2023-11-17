@@ -1,0 +1,22 @@
+enum ERole {
+    ADMIN,
+    USER,
+    TRANSLATOR
+}
+
+enum ELanguage {
+    ENGLISH,
+    RUSSIAN,
+    KAZAKH,
+    UZBEK,
+    TAJIK
+}
+
+enum ETheme {
+    BUDONGSAN,
+    MARKET,
+    BANK,
+    HOSPITAL,
+    RESTAURANT,
+    TAXI
+}

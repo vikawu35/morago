@@ -1,0 +1,16 @@
+type Rating{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    grade: Float
+    userGivesRating: User
+    userTakesRating: User
+    user: User
+}
+
+input RatingInput{
+    grade: Float
+    userGivesRating: Int
+    userTakesRating: Int
+    user: Int
+}

@@ -1,0 +1,13 @@
+type AppVersion{
+    platform: String
+    createdAt: String
+    updatedAt: String
+    latest: String
+    min: String
+}
+
+input AppVersionInput{
+    platform: String
+    latest: String
+    min: String
+}

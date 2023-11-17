@@ -1,0 +1,19 @@
+type Withdrawal{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    status: String
+    accountHolder: String
+    accountNumber: String
+    nameOfBank: String
+    sum: Float
+    user: User
+}
+input WithdrawalInput{
+    status: String
+    accountHolder: String
+    accountNumber: String
+    nameOfBank: String
+    sum: Float
+    user: Int
+}

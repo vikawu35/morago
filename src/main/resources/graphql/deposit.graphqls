@@ -1,0 +1,20 @@
+type Deposit{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    accountHolder: String
+    coin: Float
+    nameOfBank: String
+    status: String
+    won:Float
+    user: User
+}
+
+input DepositInput{
+    accountHolder: String
+    coin: Float
+    nameOfBank: String
+    status: String
+    won:Float
+    user: Int
+}

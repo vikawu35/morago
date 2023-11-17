@@ -1,0 +1,35 @@
+input AuthenticationInput {
+    phone: String!
+    password: String!
+}
+
+input TranslatorRegistrationInput {
+    phone: String!
+    password: String!
+    firstName: String!
+    lastName: String!
+    translatorProfile: TranslatorProfileInput!
+}
+
+
+input RefreshTokenInput {
+    refreshToken : String!
+}
+
+type RegistrationPayload {
+    accessToken : String
+    refreshToken : String
+}
+
+type LoginPayload {
+    accessToken : String
+    refreshToken : String
+}
+
+type RefreshTokenPayload {
+    accessToken : String
+    refreshToken : String
+}
+
+
+

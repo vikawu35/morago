@@ -1,0 +1,12 @@
+type Coin{
+    id:ID
+    createdAt: String
+    updatedAt: String
+    coin: Float
+    won: Float
+}
+
+input CoinInput{
+    coin: Float
+    won: Float
+}
